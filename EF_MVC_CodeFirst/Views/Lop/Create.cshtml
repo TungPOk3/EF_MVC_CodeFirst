@@ -1,0 +1,21 @@
+﻿@model Lop
+
+<h1>Create Class</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="TenLop" class="control-label">Class Name</label>
+        <input asp-for="TenLop" class="form-control" />
+        <span asp-validation-for="TenLop" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="KhoaId" class="control-label">Faculty</label>
+        <select asp-for="KhoaId" asp-items="@(new SelectList(ViewBag.Khoas, "Id", "TenKhoa"))" class="form-control">
+            <option value="">-- Select Faculty --</option>
+        </select>
+        <span asp-validation-for="KhoaId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

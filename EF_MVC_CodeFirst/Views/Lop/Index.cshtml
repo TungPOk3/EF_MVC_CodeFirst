@@ -1,0 +1,21 @@
+﻿@model List<Lop>
+
+<h1>List of Classes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Faculty</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lop in Model)
+        {
+            <tr>
+                <td>@lop.Ten</td>
+                <td>@lop.Khoa.Ten</td>
+            </tr>
+        }
+    </tbody>
+</table>
